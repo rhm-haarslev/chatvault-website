@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatVault — Back up your AI chat history</title>
-  <meta name="description" content="Export all your ChatGPT conversations to your computer in minutes. Private, automatic, one-time payment.">
-  <meta property="og:title" content="ChatVault — Back up your AI chat history">
-  <meta property="og:description" content="Export all your ChatGPT conversations to your computer in minutes. Private, automatic, one-time payment.">
+  <title>ChatVault — Back up your AI history. Take your context anywhere.</title>
+  <meta name="description" content="Export your ChatGPT and Claude conversations to your computer. Generate a portable memory profile and deploy it to any AI — in one click.">
+  <meta property="og:title" content="ChatVault — Back up your AI history. Take your context anywhere.">
+  <meta property="og:description" content="Export your ChatGPT and Claude conversations to your computer. Generate a portable memory profile and deploy it to any AI — in one click.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
   <style>
     html { scroll-behavior: smooth; }
     .gradient-text {
       background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-warm {
+      background: linear-gradient(135deg, #f97316, #a855f7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -36,14 +42,14 @@
     <div class="max-w-3xl mx-auto">
       <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 text-zinc-400 text-xs px-3 py-1.5 rounded-full mb-8">
         <span class="w-1.5 h-1.5 bg-green-400 rounded-full inline-block"></span>
-        Works with ChatGPT Free, Plus &amp; Team
+        ChatGPT &amp; Claude supported · Mac &amp; Windows
       </div>
       <h1 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
-        Back up your ChatGPT<br>
-        <span class="gradient-text">history in minutes</span>
+        Back up your AI history.<br>
+        <span class="gradient-text">Take your context anywhere.</span>
       </h1>
-      <p class="text-xl text-zinc-400 mb-10 max-w-xl mx-auto leading-relaxed">
-        ChatVault exports every conversation to your computer — privately, automatically, with one click. Never lose a chat again.
+      <p class="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Export every conversation from ChatGPT and Claude to your computer. Then generate a portable memory profile and deploy it to any AI — in one click.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="GUMROAD_PLACEHOLDER" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors w-full sm:w-auto">
@@ -54,18 +60,42 @@
     </div>
   </section>
 
+  <!-- Platform badges -->
+  <section class="px-6 pb-20">
+    <div class="max-w-lg mx-auto">
+      <p class="text-xs text-zinc-500 uppercase tracking-widest text-center mb-6">Works with</p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="flex items-center gap-3 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-lg flex-shrink-0">🤖</div>
+          <div>
+            <div class="font-semibold text-sm">ChatGPT</div>
+            <div class="text-xs text-zinc-500">Free, Plus &amp; Team</div>
+          </div>
+          <span class="ml-auto text-green-400 text-sm font-bold">✓</span>
+        </div>
+        <div class="flex items-center gap-3 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-lg flex-shrink-0">🧠</div>
+          <div>
+            <div class="font-semibold text-sm">Claude</div>
+            <div class="text-xs text-zinc-500">claude.ai</div>
+          </div>
+          <span class="ml-auto text-green-400 text-sm font-bold">✓</span>
+        </div>
+      </div>
+      <p class="text-xs text-zinc-600 text-center mt-4">Gemini, Grok &amp; Copilot coming soon</p>
+    </div>
+  </section>
+
   <!-- App mockup -->
   <section class="px-6 pb-24">
     <div class="max-w-lg mx-auto">
       <div class="bg-zinc-900 border border-zinc-700/80 rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
-        <!-- Window chrome -->
         <div class="bg-zinc-800 px-4 py-3 flex items-center gap-2 border-b border-zinc-700">
           <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
           <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
           <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
           <span class="text-zinc-500 text-xs mx-auto">ChatVault</span>
         </div>
-        <!-- App UI mockup -->
         <div class="p-8 text-center">
           <h2 class="text-xl font-bold mb-1">ChatVault</h2>
           <p class="text-zinc-400 text-sm mb-7">Your AI chat history, safely backed up</p>
@@ -79,13 +109,12 @@
               </div>
               <span class="ml-auto text-blue-400 text-xs">✓</span>
             </div>
-            <div class="flex items-center gap-3 p-3 rounded-xl border border-zinc-700 bg-zinc-900/50 opacity-40 relative">
+            <div class="flex items-center gap-3 p-3 rounded-xl border border-zinc-700 bg-zinc-900">
               <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-sm flex-shrink-0">🧠</div>
               <div class="text-left">
                 <div class="text-sm font-semibold">Claude</div>
                 <div class="text-xs text-zinc-500">Anthropic</div>
               </div>
-              <span class="absolute top-2 right-2 text-xs text-zinc-600">Soon</span>
             </div>
           </div>
           <p class="text-xs text-zinc-500 uppercase tracking-widest mb-3">Save to</p>
@@ -94,7 +123,7 @@
             <div class="text-sm text-zinc-400 truncate">~/Documents/ChatExport</div>
             <span class="text-zinc-600 text-xs ml-auto flex-shrink-0">Browse →</span>
           </div>
-          <div class="bg-blue-600 text-white text-sm font-semibold px-6 py-2.5 rounded-xl inline-block cursor-pointer">
+          <div class="bg-blue-600 text-white text-sm font-semibold px-6 py-2.5 rounded-xl inline-block">
             Start Export
           </div>
         </div>
@@ -106,26 +135,82 @@
   <section class="px-6 py-24 border-t border-zinc-800">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-3">How it works</h2>
-      <p class="text-zinc-400 text-center mb-16">Three steps. No technical knowledge needed.</p>
-      <div class="grid md:grid-cols-3 gap-8">
+      <p class="text-zinc-400 text-center mb-16">Export your history. Then make it portable.</p>
+      <div class="grid md:grid-cols-4 gap-6">
         <div class="text-center">
           <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">🔑</div>
           <div class="text-xs text-blue-400 uppercase tracking-widest mb-2 font-medium">Step 1</div>
-          <h3 class="font-semibold text-lg mb-3">Log in to ChatGPT</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">A login window opens inside the app. Sign in as normal — your credentials never leave your device.</p>
+          <h3 class="font-semibold mb-2">Log in</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Sign in to ChatGPT or Claude inside the app. Your credentials never leave your device.</p>
         </div>
         <div class="text-center">
           <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">📁</div>
           <div class="text-xs text-blue-400 uppercase tracking-widest mb-2 font-medium">Step 2</div>
-          <h3 class="font-semibold text-lg mb-3">Choose a save folder</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">Pick any folder on your computer. ChatVault saves everything there as organised files.</p>
+          <h3 class="font-semibold mb-2">Choose a folder</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Pick any folder on your computer. ChatVault saves every conversation as a local file.</p>
         </div>
         <div class="text-center">
-          <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">✅</div>
+          <div class="w-14 h-14 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">⚡</div>
           <div class="text-xs text-blue-400 uppercase tracking-widest mb-2 font-medium">Step 3</div>
-          <h3 class="font-semibold text-lg mb-3">Done</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">All your conversations are saved locally. ChatVault handles rate limits automatically and resumes if interrupted.</p>
+          <h3 class="font-semibold mb-2">Export</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">All conversations download automatically. Rate limits are handled for you — walk away and come back.</p>
         </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-violet-500/10 border border-violet-500/20 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">🧬</div>
+          <div class="text-xs text-violet-400 uppercase tracking-widest mb-2 font-medium">Step 4</div>
+          <h3 class="font-semibold mb-2">Generate profile</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Run MemoryVault to distill your history into a portable context profile for any AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MemoryVault feature section -->
+  <section class="px-6 py-24 border-t border-zinc-800">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/20 text-violet-300 text-xs px-3 py-1.5 rounded-full mb-6">
+          🧬 Included in ChatVault
+        </div>
+        <h2 class="text-3xl font-bold mb-4">
+          Introducing <span class="gradient-text-warm">MemoryVault</span>
+        </h2>
+        <p class="text-zinc-400 text-lg max-w-xl mx-auto leading-relaxed">
+          Your years of AI conversations contain everything an AI needs to know about you. MemoryVault extracts it — and deploys it anywhere.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+          <div class="w-12 h-12 bg-green-500/10 border border-green-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🤖</div>
+          <h3 class="font-semibold mb-2">ChatGPT</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-4">Deploy your memory profile to ChatGPT Custom Instructions with one click — no copy-paste needed.</p>
+          <div class="bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-green-400 font-mono">
+            ⚡ One-click deploy
+          </div>
+        </div>
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+          <div class="w-12 h-12 bg-orange-500/10 border border-orange-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🧠</div>
+          <h3 class="font-semibold mb-2">Claude</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-4">Copy your profile and open Claude Projects in one click. Paste into the instructions field — done.</p>
+          <div class="bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-orange-400 font-mono">
+            📋 Copy + open Claude
+          </div>
+        </div>
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+          <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">✨</div>
+          <h3 class="font-semibold mb-2">Any AI</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-4">A generic system prompt is generated for Gemini, Grok, Perplexity, or any API-based tool.</p>
+          <div class="bg-zinc-950 border border-zinc-800 rounded-lg px-3 py-2 text-xs text-blue-400 font-mono">
+            📄 Generic system prompt
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-br from-violet-500/10 to-blue-500/10 border border-violet-500/20 rounded-2xl p-6 text-center">
+        <p class="text-zinc-300 text-sm leading-relaxed max-w-xl mx-auto">
+          The analysis costs under <span class="text-white font-semibold">$0.50 in API credits</span> using your own OpenAI or Anthropic key. ChatVault never sees your conversations — everything runs on your machine.
+        </p>
       </div>
     </div>
   </section>
@@ -133,7 +218,7 @@
   <!-- Features -->
   <section class="px-6 py-24 border-t border-zinc-800">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-16">Why ChatVault</h2>
+      <h2 class="text-3xl font-bold text-center mb-16">Everything included</h2>
       <div class="grid md:grid-cols-2 gap-5">
         <div class="flex gap-4 p-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
           <span class="text-2xl flex-shrink-0">🔒</span>
@@ -143,10 +228,10 @@
           </div>
         </div>
         <div class="flex gap-4 p-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
-          <span class="text-2xl flex-shrink-0">⚡</span>
+          <span class="text-2xl flex-shrink-0">🤖🧠</span>
           <div>
-            <h3 class="font-semibold mb-2">Exports everything</h3>
-            <p class="text-zinc-400 text-sm leading-relaxed">Active and archived conversations. Works with ChatGPT Free, Plus, Team and Business accounts.</p>
+            <h3 class="font-semibold mb-2">ChatGPT + Claude</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">Export from both platforms in the same app. Works with ChatGPT Free, Plus, Team and claude.ai.</p>
           </div>
         </div>
         <div class="flex gap-4 p-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
@@ -160,7 +245,21 @@
           <span class="text-2xl flex-shrink-0">🛡️</span>
           <div>
             <h3 class="font-semibold mb-2">Rate-limit smart</h3>
-            <p class="text-zinc-400 text-sm leading-relaxed">Automatically slows down and speeds up based on ChatGPT's limits. Runs unattended — walk away and come back to a finished export.</p>
+            <p class="text-zinc-400 text-sm leading-relaxed">Automatically slows down and speeds up based on API limits. Runs unattended — walk away and come back.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 p-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
+          <span class="text-2xl flex-shrink-0">🧬</span>
+          <div>
+            <h3 class="font-semibold mb-2">MemoryVault included</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">Distill your entire history into a portable memory profile. Deploy to ChatGPT, Claude, or any AI in seconds.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 p-6 bg-zinc-900 border border-zinc-800 rounded-2xl">
+          <span class="text-2xl flex-shrink-0">📁</span>
+          <div>
+            <h3 class="font-semibold mb-2">Projects &amp; folders</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">Exports conversations from inside ChatGPT Projects and Claude — not just top-level chats.</p>
           </div>
         </div>
       </div>
@@ -171,17 +270,18 @@
   <section class="px-6 py-24 border-t border-zinc-800" id="pricing">
     <div class="max-w-sm mx-auto text-center">
       <h2 class="text-3xl font-bold mb-3">Simple pricing</h2>
-      <p class="text-zinc-400 mb-12">One price. Both platforms. Forever.</p>
+      <p class="text-zinc-400 mb-12">Everything included. One price.</p>
       <div class="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 relative overflow-hidden">
         <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-violet-500 rounded-t-2xl"></div>
         <div class="text-6xl font-bold mb-1">$19</div>
         <div class="text-zinc-400 text-sm mb-8">One-time payment</div>
         <ul class="text-left space-y-3 mb-8 text-sm">
           <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> Mac &amp; Windows included</li>
-          <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> Export unlimited conversations</li>
+          <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> ChatGPT export (Free, Plus &amp; Team)</li>
+          <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> Claude export included</li>
+          <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> MemoryVault profile generation</li>
+          <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> One-click deploy to ChatGPT &amp; Claude</li>
           <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> Free updates forever</li>
-          <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> ChatGPT Free, Plus &amp; Team</li>
-          <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> Claude, Gemini &amp; more coming soon</li>
           <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-400 font-bold">✓</span> 30-day money-back guarantee</li>
         </ul>
         <a href="GUMROAD_PLACEHOLDER" class="block w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-4 rounded-xl transition-colors text-center text-lg">
@@ -198,27 +298,31 @@
       <h2 class="text-3xl font-bold text-center mb-12">FAQ</h2>
       <div class="space-y-0 divide-y divide-zinc-800">
         <div class="py-6">
+          <h3 class="font-semibold mb-2">Does it work with both ChatGPT and Claude?</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Yes. ChatVault supports both ChatGPT (Free, Plus, Team) and Claude (claude.ai). You can export from both in the same app, and MemoryVault works across both sets of conversations.</p>
+        </div>
+        <div class="py-6">
+          <h3 class="font-semibold mb-2">What is MemoryVault and how does it work?</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">MemoryVault analyzes your backed-up conversations using an AI model (via your own OpenAI or Anthropic API key) and distills them into a portable memory profile. It generates three output files: one for ChatGPT Custom Instructions, one for Claude Project instructions, and a generic system prompt for any AI. The analysis typically costs under $0.50 in API credits.</p>
+        </div>
+        <div class="py-6">
           <h3 class="font-semibold mb-2">macOS says it can't verify the app — is it safe?</h3>
           <p class="text-zinc-400 text-sm leading-relaxed">Yes. Because ChatVault isn't yet registered with Apple's notarization program, macOS shows a warning on first launch. Go to System Settings → Privacy &amp; Security, scroll down, and click "Open Anyway". This is a one-time step.</p>
         </div>
         <div class="py-6">
+          <h3 class="font-semibold mb-2">Is my data private?</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Completely. ChatVault runs entirely on your computer. Your conversations are downloaded directly from ChatGPT/Claude to your local folder — they never touch our servers. For MemoryVault, your conversation text is sent to OpenAI or Anthropic via your own API key (the same way ChatGPT itself works).</p>
+        </div>
+        <div class="py-6">
           <h3 class="font-semibold mb-2">Does it work with ChatGPT Team or Business?</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">Yes. ChatVault automatically detects your account type and handles Team and Business exports correctly — no extra configuration needed.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="font-semibold mb-2">What format are my conversations saved in?</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">JSON files, one per conversation. This is a standard format readable by any text editor and compatible with most AI tools and data platforms.</p>
-        </div>
-        <div class="py-6">
-          <h3 class="font-semibold mb-2">Will Claude and Gemini be supported?</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">Yes — coming in the next update. Everyone who buys now gets those updates for free.</p>
+          <p class="text-zinc-400 text-sm leading-relaxed">Yes. ChatVault automatically detects your account type and handles Team and Business exports correctly.</p>
         </div>
         <div class="py-6">
           <h3 class="font-semibold mb-2">My account has 1000+ conversations — will it still work?</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">Yes. ChatVault is designed for large accounts and handles rate limiting automatically. A 1000-conversation export typically takes 20–40 minutes running in the background.</p>
+          <p class="text-zinc-400 text-sm leading-relaxed">Yes. ChatVault is built for large accounts. It handles rate limiting automatically, resumes if interrupted, and never re-downloads what's already saved. A 1000-conversation export typically takes 20–40 minutes in the background.</p>
         </div>
         <div class="py-6">
-          <h3 class="font-semibold mb-2">What is your refund policy?</h3>
+          <h3 class="font-semibold mb-2">What is the refund policy?</h3>
           <p class="text-zinc-400 text-sm leading-relaxed">If ChatVault doesn't work on your machine, reach out within 30 days for a full refund. No questions asked.</p>
         </div>
       </div>
@@ -228,8 +332,8 @@
   <!-- Final CTA -->
   <section class="px-6 py-28 border-t border-zinc-800 text-center">
     <div class="max-w-xl mx-auto">
-      <h2 class="text-4xl font-bold mb-4">Your chat history is worth keeping</h2>
-      <p class="text-zinc-400 text-lg mb-10">One click. Saved forever. Never lose a conversation again.</p>
+      <h2 class="text-4xl font-bold mb-4">Your AI history is worth keeping.</h2>
+      <p class="text-zinc-400 text-lg mb-10">Export it. Profile it. Take it anywhere.</p>
       <a href="GUMROAD_PLACEHOLDER" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold px-10 py-4 rounded-xl text-lg transition-colors">
         Buy ChatVault — $19
       </a>
